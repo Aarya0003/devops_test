@@ -514,7 +514,7 @@ elif app_mode == "Make Prediction":
                     # st.write(f"Probability of Not Fraud: {prediction_proba[0]:.4f}")
                 else:
                     #changes are made here................................................................................................................................................................
-                    st.success(" Status: Transaction appears to be legitimate.")
+                    st.success("aaryaStatus: Transaction appears to be legitimate.")
                     st.metric("Fraud Probability", f"{prediction_proba[1]:.4f}")
                     # st.write(f"Probability of Not Fraud: {prediction_proba[0]:.4f}")
 
