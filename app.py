@@ -53,7 +53,7 @@ def load_data(filepath):
             # Calculate age in years (approximate)
             df.loc[valid_dates, 'age'] = ((df.loc[valid_dates, 'trans_date_trans_time'] - df.loc[valid_dates, 'dob']).dt.days / 365.25)
             # Handle potential invalid ages (e.g., negative if dob is after trans_date)
-            df['age'] = df['age'].apply(lambda x: x if x is not None and x > 0 else np.nan)
+            df['age'] = df['age'].apply(lambda x: x if x is not None and x > 1 else np.nan)
             # Fill missing age with the median age (a common strategy)
             median_age = df['age'].median()
             df['age'].fillna(median_age, inplace=True)
